@@ -50,18 +50,17 @@ def dfs(state, visited):
             return result
     return None
 
-# Initial state: 3 Ls, empty, 3 Rs
+
 initial_state = ['L', 'L', 'L', ' ', 'R', 'R', 'R']
 start = RabbitState(initial_state)
 visited = set()
 
-# Run DFS
 solution = dfs(start, visited)
 
 # Print the solution path
 if solution:
-    print("✅ DFS Solution Path:")
+    print("DFS Solution Path:")
     for step in solution:
         print(''.join(step))
 else:
-    print("❌ No solution found.")
+    print(" No solution found.")
