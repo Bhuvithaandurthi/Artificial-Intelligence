@@ -1,0 +1,30 @@
+Comparision of both results and performance:
+
+For the given Test Grids both BFS & A* algorithms had produced the same results.Because here the sample size(the size of the grids) is small & also the heuristic we had taken is appropriate. 
+
+Best First Search uses only the heuristic value to choose the next step. This makes it faster to give a path to the goal because it explores fewer nodes. However, it does not guarantee the shortest path, as it ignores the actual cost g(n) from start to n.
+
+A* Search combines both the actual path cost (g(n)) and heuristic (h(n)). This ensures that A* always finds the shortest possible path.It takes slight longer time because it has to explore more number of nodes than the BFS. 
+  
+  The main cause for getting the same results for both even though A* is optimal than BFS is :
+  1. Using of euclidean distance as heuristic 
+  2.small sample size without any traps.
+
+
+For a 6*6 grid given below we can observe the difference:
+     [[0, 0, 0, 0, 0, 0],
+     [0, 1, 1, 1, 1, 0],
+     [0, 1, 0, 0, 1, 0],
+     [0, 1, 0, 1, 1, 0],
+     [0, 0, 0, 0, 1, 0],
+     [0, 1, 1, 0, 0, 0]]
+
+OUTPUT:
+   
+for the binary matrix grid: [[0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 1, 0], [0, 1, 0, 0, 1, 0], [0, 1, 0, 1, 1, 0], [0, 0, 0, 0, 1, 0], [0, 1, 1, 0, 0, 0]]
+
+Best First Search:Path length: 10 Path: [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (1, 5), (2, 5), (3, 5), (4, 5), (5, 5)]
+
+A* Search :Path length: 9 Path: [(0, 0), (1, 0), (2, 0), (3, 0), (4, 1), (4, 2), (5, 3), (5, 4), (5, 5)]
+
+
